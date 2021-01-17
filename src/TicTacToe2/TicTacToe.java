@@ -55,6 +55,8 @@ public class TicTacToe implements ActionListener {
         frame.add(title_panel,BorderLayout.NORTH);
         frame.add(button_panel);
 
+        firstTurn();
+
 
 
 
@@ -78,6 +80,14 @@ public class TicTacToe implements ActionListener {
     }
 
     public void check(){
+        if(random.nextInt(2) == 0){
+            player1_turn = true;
+            textfield.setText(" X TURN ");
+
+        } else {
+            player1_turn = false;
+            textfield.setText(" O TURN ");
+        }
 
     }
 
