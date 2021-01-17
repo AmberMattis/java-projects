@@ -20,4 +20,20 @@ public class Menu {
         System.out.println("*********************");
 
     }
+
+    public static void menuSelection(){
+        gameMenu();
+
+        System.out.println("Select From Menu");
+        Input user  = new Input();
+        Integer userSelection  =  user.userInput;
+
+
+        if (userSelection.equals(1)){
+            TurnOneMethod.turnOnePlay();
+        }else{
+            System.out.println("bye");
+        }
+
+    }
 }

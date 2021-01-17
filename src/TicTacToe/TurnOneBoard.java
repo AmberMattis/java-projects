@@ -1,6 +1,6 @@
 package TicTacToe;
 
-public class TurnOne {
+public class TurnOneBoard {
     public static void rowOneColOneX() {
         System.out.println("      |      |      ");
         System.out.println("   X  |      |      ");
