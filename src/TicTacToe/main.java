@@ -2,7 +2,7 @@ package TicTacToe;
 
 public class main {
     public static void main(String[] args){
-        gameMethods menu = new gameMethods();
-        menu.gameMenu();
+        Menu menu = new Menu();
+        Menu.gameMenu();
     }
 }

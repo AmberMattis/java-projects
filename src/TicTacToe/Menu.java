@@ -1,6 +1,6 @@
 package TicTacToe;
 
-public class gameMethods {
+public class Menu {
 //    Create a tic tac toe game in javas
 //
 //    1. Display tic tac toe title
