@@ -20,10 +20,16 @@ public class TurnOneMethod {
             TurnOneBoard.rowTwoColOneX();
     }   if (userNum.equals(5)){
             TurnOneBoard.rowTwoColTwoX();
-    }   if (userNum.equals(6)) {
+    }   if (userNum.equals(6)){
             TurnOneBoard.rowTwoColThreeX();
-    }   else {
-            System.out.println("bye");
+    }  if (userNum.equals(7)){
+            TurnOneBoard.rowThreeColOneX();
+    }  if (userNum.equals(8)){
+            TurnOneBoard.rowThreeColTwoX();
+    }  if (userNum.equals(9)){
+            TurnOneBoard.rowThreeColThreeX();
+    } else if (userNum > 9 || userNum < 1) {
+        System.out.println("goodbye");
     }
 }
 
