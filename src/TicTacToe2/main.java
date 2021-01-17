@@ -1,5 +1,10 @@
 package TicTacToe2;
 
 public class main {
-    TicTacToe game = new TicTacToe();
+
+
+    public static void main(String[] args) {
+        TicTacToe game = new TicTacToe();
+
+    }
 }

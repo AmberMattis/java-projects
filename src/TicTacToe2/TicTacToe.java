@@ -15,9 +15,55 @@ public class TicTacToe implements ActionListener {
 
 
     TicTacToe(){
+        //Building tic tac toe board
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //sets the size of the tic tac toe board
         frame.setSize(800,800);
+
+        //sets the color of the tic tac toe board
         frame.getContentPane().setBackground(Color.BLACK);
+
+        frame.setLayout(new BorderLayout());
+        frame.setVisible(true);
+
+        textfield.setBackground(Color.black);
+        textfield.setForeground(Color.pink);
+        textfield.setFont(new Font("Ink Free", Font.BOLD,75));
+        textfield.setText((" X --  Tic-Tac-Toe -- O"));
+        textfield.setOpaque(true);
+
+        //Title//
+
+        title_panel.setLayout(new BorderLayout());
+        title_panel.setBounds(0,0,800,100);
+
+        button_panel.setLayout(new GridLayout(3,3));
+        button_panel.setBackground(Color.black);
+
+        //Buttons 1-9
+
+        for(int i = 0; i < 9; i++) {
+            buttons[i] = new JButton();
+            button_panel.add(buttons[i]);
+            buttons[i].setFont(new Font("MV Boli", Font.BOLD,120));
+            buttons[i].setFocusable(false);
+            buttons[i].addActionListener(this);
+        }
+
+        title_panel.add(textfield);
+        frame.add(title_panel,BorderLayout.NORTH);
+        frame.add(button_panel);
+
+
+
+
+
+
+
+
+
+
 
     }
 
