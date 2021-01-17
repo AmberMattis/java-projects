@@ -74,7 +74,7 @@ public class TicTacToe implements ActionListener {
                         buttons[i].setText("X");
                         player1_turn = false;
                         textfield.setText("Player O");
-                        //check();
+                        check();
                     }
             }else{
                     if(buttons[i].getText() =="") {
@@ -82,7 +82,7 @@ public class TicTacToe implements ActionListener {
                         buttons[i].setText("O");
                         player1_turn = true;
                         textfield.setText("Player X");
-                        //check()
+                        check();
 
                     }
                 }
@@ -253,10 +253,46 @@ public class TicTacToe implements ActionListener {
     }
 
     public void winnerX(int a, int b, int c){
+        buttons[a].setBackground(Color.GREEN);
+        buttons[b].setBackground(Color.GREEN);
+        buttons[c].setBackground(Color.GREEN);
+
+        //disable buttons
+        try {
+            Thread.sleep(2000);
+        }
+        catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        for(int i = 0; i < 9; i++){
+            buttons[i].setEnabled(false);
+        }
+
+        textfield.setText("X...You're a Winner!!!");
 
     }
 
+
+
     public void winnerO(int a, int b, int c){
+        buttons[a].setBackground(Color.GREEN);
+        buttons[b].setBackground(Color.GREEN);
+        buttons[c].setBackground(Color.GREEN);
+
+        //disable buttons
+        try {
+            Thread.sleep(2000);
+        }
+        catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        for(int i = 0; i < 9; i++){
+            buttons[i].setEnabled(false);
+        }
+
+        textfield.setText("O...You're a Winner!!!");
 
     }
 }
