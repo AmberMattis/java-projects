@@ -2,6 +2,8 @@ package TicTacToe;
 
 public class TurnOneMethod {
 
+
+
     public static void turnOnePlay(){
     System.out.println("Enter something");
 
@@ -12,12 +14,17 @@ public class TurnOneMethod {
         TurnOneBoard.rowOneColOneX();
     }   if (userNum.equals(2)){
             TurnOneBoard.rowOneColTwoX();
-    }   if (userNum.equals((3))) {
+    }   if (userNum.equals((3))){
             TurnOneBoard.rowOneColThreeX();
-        }else{
+    }   if (userNum.equals(4)){
+            TurnOneBoard.rowTwoColOneX();
+    }   if (userNum.equals(5)){
+            TurnOneBoard.rowTwoColTwoX();
+    }   if (userNum.equals(6)) {
+            TurnOneBoard.rowTwoColThreeX();
+    }   else {
             System.out.println("bye");
-        }
-
+    }
 }
 
 
