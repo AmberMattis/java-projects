@@ -46,7 +46,7 @@ public class TicTacToe implements ActionListener {
         for(int i = 0; i < 9; i++) {
             buttons[i] = new JButton();
             button_panel.add(buttons[i]);
-            buttons[i].setBackground(new Color(30));
+            buttons[i].setOpaque(true);
             buttons[i].setFont(new Font("MV Boli", Font.BOLD,120));
             buttons[i].setFocusable(false);
             buttons[i].addActionListener(this);
@@ -254,16 +254,13 @@ public class TicTacToe implements ActionListener {
 
     public void winnerX(int a, int b, int c){
         buttons[a].setBackground(Color.GREEN);
+        buttons[a].setOpaque(true);
         buttons[b].setBackground(Color.GREEN);
+        buttons[b].setOpaque(true);
         buttons[c].setBackground(Color.GREEN);
+        buttons[c].setOpaque(true);
 
         //disable buttons
-        try {
-            Thread.sleep(2000);
-        }
-        catch (InterruptedException e){
-            e.printStackTrace();
-        }
 
         for(int i = 0; i < 9; i++){
             buttons[i].setEnabled(false);
@@ -277,16 +274,14 @@ public class TicTacToe implements ActionListener {
 
     public void winnerO(int a, int b, int c){
         buttons[a].setBackground(Color.GREEN);
+        buttons[a].setOpaque(true);
         buttons[b].setBackground(Color.GREEN);
+        buttons[b].setOpaque(true);
         buttons[c].setBackground(Color.GREEN);
+        buttons[c].setOpaque(true);
+
 
         //disable buttons
-        try {
-            Thread.sleep(2000);
-        }
-        catch (InterruptedException e){
-            e.printStackTrace();
-        }
 
         for(int i = 0; i < 9; i++){
             buttons[i].setEnabled(false);
