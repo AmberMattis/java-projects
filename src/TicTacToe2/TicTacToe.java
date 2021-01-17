@@ -75,19 +75,29 @@ public class TicTacToe implements ActionListener {
         //Auto generate maethod
     }
 
-    public void firstTurn(){
+    public void firstTurn() {
+
+        //Randomly generate the first X or O as the fist player
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        if(random.nextInt(2) == 0){
+            player1_turn = true;
+            textfield.setText("X     -- Player X --      X");
+
+        } else {
+            player1_turn = false;
+            textfield.setText("O     -- Player O --      O");
+        }
 
     }
 
     public void check(){
-        if(random.nextInt(2) == 0){
-            player1_turn = true;
-            textfield.setText(" X TURN ");
 
-        } else {
-            player1_turn = false;
-            textfield.setText(" O TURN ");
-        }
 
     }
 
